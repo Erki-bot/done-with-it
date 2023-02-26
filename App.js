@@ -11,6 +11,8 @@ import {
 import ViewImageScreen from "./src/components/exercices/layouts/ViewImageScreen";
 import { WelcomeScreen } from "./src/components/exercices/layouts/WelcomeScreen";
 import { Flexes } from "./src/components/layouts/flexboxes/Flexes";
+import Circle from "./src/components/stylings/Circle";
+import colors from "./src/config/colors";
 
 export default function App() {
   let img1Url = [
@@ -21,7 +23,7 @@ export default function App() {
     console.log("Text pressed");
   };
   console.log("App started");
-  return <ViewImageScreen />;
+  return <Circle raduis={300} color= {colors.secondary} elevation = {50}/>;
 }
 
 const styles = StyleSheet.create({
