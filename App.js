@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  Alert,
+} from "react-native";
+import ViewImageScreen from "./src/components/exercices/layouts/ViewImageScreen";
+import { WelcomeScreen } from "./src/components/exercices/layouts/WelcomeScreen";
+import { Flexes } from "./src/components/layouts/flexboxes/Flexes";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  let img1Url = [
+    "https://picsum.photos/200/300",
+    "https://cdn.pixabay.com/photo/2023/01/23/09/26/cat-7738210_960_720.jpg",
+  ];
+  const handlePress = () => {
+    console.log("Text pressed");
+  };
+  console.log("App started");
+  return <ViewImageScreen />;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
